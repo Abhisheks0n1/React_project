@@ -1,0 +1,35 @@
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 50%; 
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    transition: all 0.9s ease-in-out;
+}
+
+@keyframes moveInCircle {
+    0% {
+        transform: translate(150px, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(150px, 150px) rotate(90deg);
+    }
+    50% {
+        transform: translate(0, 150px) rotate(180deg);
+    }
+    75% {
+        transform: translate(-150px, 150px) rotate(270deg);
+    }
+    100% {
+        transform: translate(-150px, 0) rotate(360deg);
+    }
+}
+
+.circle.startAnimation {
+    animation: moveInCircle 15s infinite linear;
+}
+.circle.stopAnimation {
+    animation: none;
+}
